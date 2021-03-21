@@ -1,0 +1,122 @@
+:root {
+    --hder-clr: #F3EED9;
+    --primary-clr: #222C2a;
+    --secondary-clr: #824936;
+    --reglr-clr: #FFF;
+
+    --frst-fnt: 'Roboto', serif;
+    --scond-fnt: 'Playfair Display', serif;
+}
+
+/* inicialiting variables */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--frst-fnt);
+}
+
+
+
+h1, h2, h3 {
+    font-family: var(--scond-fnt);
+    margin: 0 0 .6em 0;
+    font-weight: 900;
+    line-height: 1;
+}
+
+header, section{
+    padding: 3rem 0;
+}
+
+/* 
+    =============
+    the sections  
+    =============
+*/
+
+/* the header */
+
+.main-head {
+    background-color: var(--hder-clr);
+    color: var(--secondary-clr);
+    text-align: center;
+}
+
+/* first section */
+
+.white-sect {
+    background-color: var(--reglr-clr);
+}
+
+.white-sect h2 {
+    color: var(--secondary-clr);
+    text-align: center;
+}
+
+.colum-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* second section */
+
+.dark-sect {
+    background-color: var(--primary-clr);
+    color: var(--reglr-clr);
+}
+
+/* third section */
+.brown-sect {
+    background-color: var(--secondary-clr);
+    color: var(--reglr-clr);
+}
+
+
+/* width and basic responsive */
+.width-div {
+    width: 80%;
+    margin-inline: auto;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+}
+/* image section manage */
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* media queries and some complexity */
+
+@media (min-width: 42em) {
+    .colum-text {
+        flex-direction: row;
+    }
+
+    .colum-text div {
+        margin-left: 1em;
+    }
+
+    .text-content {
+        flex-direction: row;
+    }
+
+    .text-content > * {
+        flex-basis: 100%;
+    }
+
+    .text-info {
+        margin-inline: 1em;
+
+    }
+}
